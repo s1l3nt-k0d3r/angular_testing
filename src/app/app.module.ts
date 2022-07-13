@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -12,6 +14,7 @@ import { ApiTableComponent } from './components/apiTable/apiTable.component';
 @NgModule({
   imports:      [ BrowserModule, 
                   FormsModule, 
+                  HttpClientModule,
                   MatProgressSpinnerModule, 
                   MatTableModule,
                   MatPaginatorModule ],

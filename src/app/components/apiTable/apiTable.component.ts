@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 export interface ToDoItem {
   userId: number;
@@ -37,7 +36,7 @@ export class ApiTableComponent implements AfterViewInit {
           .pipe(takeUntil(this.unsubscribe$))
           .subscribe((apiData: any) => {
               this.tableData = apiData;
-
+              
               this.resultsLength = apiData.length;
           });
 
